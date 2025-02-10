@@ -15,7 +15,7 @@ app.get("/products", async (req, res) => {
   }
 });
 
-app.post("/products", async (req, res) => {
+app.post("/product", async (req, res) => {
   try {
       const { name, type } = req.body;
       if (!name || !type) return res.status(400).json({ error: "Some required fields are missing" });
