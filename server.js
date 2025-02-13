@@ -4,7 +4,7 @@ const app = express ();
 app.use(express.json());
 const PORT = 3000;
 
-const NET_API_URL ="http://localhost:5041"
+const NET_API_URL ="https://isabelladaoodapi.azurewebsites.net/"
 
 app.get("/products", async (req, res) => { 
   try {
@@ -34,7 +34,6 @@ app.post("/product", async (req, res) => {
       res.status(500).json({ error: "Unable to submit data" });
   }
 });
-
   app.listen(PORT, () => {
     console.log("listening to 3000");
 });
